@@ -16,12 +16,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: absolute;
+    position:absolute ;
     top: 0;
     left: 0;
     padding: 0 20px;
     width: 40%;
-    margin-top: 150px;
+    margin-top: 40px;
     margin-left: 50px;
 }
 
@@ -97,9 +97,9 @@ margin-bottom: 30px;
 }
 
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 768px){
   .mandalorian{
-    height: 400px;
+    height: 500px;
     display: flex;
     flex-direction: column-reverse;
   }
@@ -117,5 +117,11 @@ margin-bottom: 30px;
   .three-column{
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media (min-width:600) or (max-width:1025px) {
+  .text-content {
+   
   }
 }
