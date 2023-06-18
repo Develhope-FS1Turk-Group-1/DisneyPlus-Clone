@@ -119,9 +119,3 @@ margin-bottom: 30px;
     flex-direction: column;
   }
 }
-
-@media (min-width:600) or (max-width:1025px) {
-  .text-content {
-   
-  }
-}
