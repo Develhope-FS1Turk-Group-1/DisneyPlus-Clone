@@ -35,7 +35,8 @@ img{
     width: 100%;
     display: block;
     height: auto;
-    max-width: 300px
+    max-width: 300px;
+    margin: auto;
 
 }
 
@@ -93,6 +94,10 @@ footer {
 }
 
 @media (max-width: 479px) {
+
+    .card {width: 40%;
+    }
+
     h2 { 
         font-size: 24px;
         line-height: 34px;}
@@ -116,6 +121,9 @@ footer {
 }
 
 @media (min-width: 480px) {
+
+    .card {width: 40%;}
+
     h2 { 
         font-size: 24px;
         line-height: 34px;}
@@ -139,6 +147,8 @@ footer {
 }
 
 @media (min-width: 769px) {
+
+    .card {width: 20%;}
     h2 { 
         font-size: 28px;
         line-height: 38px;}
