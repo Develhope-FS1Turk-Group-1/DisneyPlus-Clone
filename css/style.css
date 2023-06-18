@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Avenir', sans-serif;
+}
+
+.mandalorian {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #040814;
+}
+
+.text-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    width: 40%;
+    margin-top: 150px;
+    margin-left: 50px;
+}
+
+/* Avenir,sans-serif; */
+
+.mandalorian h1 {
+  color: #f9f9f9;
+  font-size: 44px;
+  line-height: 54px;
+}
+
+.mandalorian p {
+  color: silver;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.mandalorian img,
+.description img {
+  width: 100%;
+  height: auto;
+}
+
+.description{
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 5.6vw;
+  position: relative;
+  background-color: #040814;
+}
+
+.description h1{
+font-size: 44px;
+line-height: 54px;
+font-weight: 700;
+letter-spacing: normal;
+color: #f9f9f9;
+text-align: center;
+margin-bottom: 30px;
+}
+
+.description p{
+  color: silver;
+  line-height: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.description .three-column{
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.three-column h3{
+  color: #f9f9f9;
+  text-align: center;
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 700;
+  letter-spacing: normal;
+  margin-top: 20px;
+}
+
+.three-column p{
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 24px;
+  color: silver;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 600px){
+  .mandalorian{
+    height: 400px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .text-content{
+    margin-top: 15px;
+    width: auto;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .three-column{
+    display: flex;
+    flex-direction: column;
+  }
+}
