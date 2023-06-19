@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DISNEY PLUS CLONE PROJECT</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body onscroll="getScrollPosition()">
+        <header>
+            <nav class="pre-sticky">
+                <ul>
+                    <li>
+                        <button class="login">LOGIN</button>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="post-sticky">
+                <ul>
+                    <li>
+                        <button class="signup">SIGN UP NOW</button>
+                    </li>
+                    <li>
+                        <button class="login">LOGIN</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="section_header_part">
+                <div class="cover"></div>
+                <div class="content">
+                    <p>
+                        <span class="h1">Stream brand new Originals, blockbusters, binge-worthy series and more</span>
+                    </p>
+                    <span>Cancel at any time.*</span>
+                    <div class="space_to_bottom"></div>
+                    <p class="enter_mail">Enter your email to create or restart your subscription.</p>
+                
+                    <div class="form_container">
+                        <form action="">
+                            <div class="form-field-container">
+                                <input type="email" name="email" class="email" placeholder="Email">
+                            </div>
+                            <div class="form-field-buttons">
+                                <button type="submit">GET STARTED</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <p class="month_info">Get 12 months for the price of 10 when you sign up for an annual Disney+ subscription, compared to paying monthly.</p>
+                    <p class="fine"><span class="fine">*effective at the end of the billing period.</span></p>
+                </div>
+
+
+                <button class="hint" aria-label="Down Arrow" onclick="go_to_section_2();"><span><svg class="down" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" fill="none"></rect><path d="M36.63,18.37a1.37,1.37,0,0,1,2.15.37,1.7,1.7,0,0,1-.3,2.06L25.4,32.64a1.37,1.37,0,0,1-1.85,0l-13-11.84a1.71,1.71,0,0,1-.29-2.06,1.37,1.37,0,0,1,2.15-.37l12.11,11ZM24.25,31.42a.38.38,0,0,1,.46,0l-.23-.21ZM11.71,19.55s0,.06,0,0Zm25.61,0h0Z"></path></svg></span></button>
+                
+            </section>
+            <section id="2" style="height: 1000px;background-color: red;">
+            </section>
+        </main>
+
+        <!-- Script is started from here -->
+        <script>
+            const browserHeight = window.innerHeight;
+            const getScrollPosition = () => {
+                if(window.scrollY > browserHeight){
+                    console.log('test')
+                    document.querySelector('nav.pre-sticky').style.opacity = '0';
+                    document.querySelector('nav.post-sticky').style.opacity = '1';
+                } else {
+                    document.querySelector('nav.pre-sticky').style.opacity = '1';
+                    document.querySelector('nav.post-sticky').style.opacity = '0';
+                }
+            }
+            
+            const go_to_section_2 = () => {
+                
+                window.scrollBy(0, 893);
+                
+            }
+        </script>
+    </body>
+</html>
