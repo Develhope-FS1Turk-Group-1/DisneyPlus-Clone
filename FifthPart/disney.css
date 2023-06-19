@@ -4,11 +4,11 @@
     font-family: Avenir,sans-serif;
 }
 
-section { 
+.section-5 { 
     padding: 5.6vw
 }
 
-body { 
+.body-5 { 
     text-align: center; 
     background-color: #040714;
     color: silver;
@@ -17,7 +17,7 @@ body {
     font-weight: 400;
 }
 
-.four-cards {
+.four-cards-5 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -25,13 +25,13 @@ body {
     margin-bottom:20px;
 }
 
-h2 {
+.h2-5 {
     margin-bottom: 16px;
     line-height: 50px;
     color: #f9f9f9;
 }
 
-img{
+.img-5{
     width: 100%;
     display: block;
     height: auto;
@@ -40,26 +40,26 @@ img{
 
 }
 
-h3 { margin-top: 20px;
+.h3-5 { margin-top: 20px;
     margin-bottom: 24px; 
     color: #f9f9f9;
 }
 
 
-.platform {
+.platform-5 {
     color: #C0C0C0;
     list-style-type:none;
     margin-bottom: 20px;
     line-height: 28px;
 }
 
-.note {margin-bottom:20px;
+.note-5 {margin-bottom:20px;
     font-size: 16px;
     line-height: 26px;}
 
-.disneylogo {width: 80px;}
+.disneylogo-5 {width: 80px;}
 
-footer {
+.footer-5 {
     display: flex;
     flex-direction: column; 
     align-items: center; 
@@ -70,24 +70,25 @@ footer {
     max-width: 1024px;
     padding: 26px 8px;}
 
-.footer-items {display: flex; 
+.footer-items-5 {display: flex; 
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 15px;
     list-style: none;
 }
 
-.link:hover{color:#f9f9f9; cursor: pointer;}
-.link:active{opacity:.8}
-.language-selector {text-decoration: underline;}
-.language-selector:hover{color:#f9f9f9; cursor: pointer;}
-.language-selector:active{opacity:.8}
+.link-5:hover{color:#f9f9f9; cursor: pointer;}
+.link-5:active{opacity:.8}
 
-.link, .language-selector { 
+.language-selector-5:hover{color:#f9f9f9; cursor: pointer;}
+.language-selector-5:active{opacity:.8}
+
+.link-5, .language-selector-5 {
+    text-decoration: underline;
     padding: 8px 12px;
     font-size: 12px}
 
-.language-selector {
+.language-selector-5 {
     overflow:hidden;
     background-color: transparent;
     border-radius: 50px;
@@ -95,98 +96,100 @@ footer {
 
 @media (max-width: 479px) {
 
-    .card {width: 40%;
+    .card-5 {width: 40%;
     }
 
-    h2 { 
+    .h2-5 { 
         font-size: 24px;
         line-height: 34px;}
 
-    h3 { 
+    .h3-5 { 
         font-size: 22px;}
 
-    .platform {
+    .platform-5 {
         font-size: 15px;
         line-height: 25px;}
 
-    .footer {
+    .footer-5 {
         font-size: 11px;}
 
-    .note {
+    .note-5 {
         line-height: 24px;}
 
-    .copyright {
+    .copyright-5 {
         font-size: 11px;}
 
 }
 
 @media (min-width: 480px) {
 
-    .card {width: 40%;}
+    .card-5 {width: 40%;}
 
-    h2 { 
+    .h2-5 { 
         font-size: 24px;
         line-height: 34px;}
 
-    h3 { 
+    .h3-5 { 
         font-size: 22px;}
 
-    .platform {
+    .platform-5 {
         font-size: 15px;
         line-height: 25px;}
 
-    .footer {
+    .footer-5 {
         font-size: 11px;}
 
-    .note {
+    .note-5 {
         line-height: 24px;}
 
-    .copyright {
+    .copyright-5 {
         font-size: 11px;}
 
 }
 
 @media (min-width: 769px) {
 
-    .card {width: 20%;}
-    h2 { 
+    .card-5 {width: 20%;}
+
+    .h2-5 { 
         font-size: 28px;
         line-height: 38px;}
 
-    h3 { 
+    .h3-5 { 
         font-size: 24px;}
 
-    .platform {
+    .platform-5 {
         font-size: 16px;
         line-height: 26px;}
 
-    .footer {
+    .footer-5 {
         font-size: 12px;}
 
-    .note {
+    .note-5 {
         line-height: 25px;}
-    .copyright {
+
+    .copyright-5 {
         font-size: 12px;}
 }
 
 @media (min-width: 1025px) {
-    h2 { 
+    .h2-5 { 
         font-size: 40px;
         line-height: 50px;}
 
-    h3 { 
+    .h3-5 { 
         font-size: 28px;}
 
-    .platform {
+    .platform-5 {
         font-size: 18px;
         line-height: 28px;}
 
-    .footer {
+    .footer-5 {
         font-size: 12px;}
 
-    .note {
+    .note-5 {
         line-height: 26px;}
 
-    .copyright {
+    .copyright-5 {
         font-size: 12px;}
 }
