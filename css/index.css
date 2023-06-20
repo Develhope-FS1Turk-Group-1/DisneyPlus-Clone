@@ -486,14 +486,13 @@ button.hint .down{
     list-style: none;
 }
 
-.link-5:hover{color:#f9f9f9; cursor: pointer;}
+.link-5:hover{color:#f9f9f9; cursor: pointer;text-decoration: underline;}
 .link-5:active{opacity:.8}
 
 .language-selector-5:hover{color:#f9f9f9; cursor: pointer;}
 .language-selector-5:active{opacity:.8}
 
 .link-5, .language-selector-5 {
-    text-decoration: underline;
     padding: 8px 12px;
     font-size: 12px}
 
