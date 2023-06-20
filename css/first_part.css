@@ -47,13 +47,13 @@ nav, nav .ul{
     justify-content: center;
     box-sizing: border-box;
     display: flex;
-    min-height: 91vh;
+    min-height: 892px;
     padding: 5.6vw;
     padding-top: 15vw;
 }
 
 .section_header_part .cover{
-    background: url('images/original.jpeg');
+    background: url('../images/original_1.jpeg');
     background-repeat: no-repeat;
     bottom: 0;
     left: 0;
@@ -199,8 +199,6 @@ div.form-field-container{
 }
 
 div.form-field-buttons{
-    padding: 1px 16px;
-    margin-left: 10px;
     cursor: pointer;
 }
 
