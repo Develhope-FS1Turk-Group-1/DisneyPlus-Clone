@@ -548,10 +548,14 @@ h2 {
   list-style: none;
 }
 
+.a-5:hover {
+  color: #f9f9f9;
+  cursor: pointer;
+}
+
 .link-5:hover {
   color: #f9f9f9;
   cursor: pointer;
-  text-decoration: underline;
 }
 .link-5:active {
   opacity: 0.8;
@@ -563,6 +567,11 @@ h2 {
 }
 .language-selector-5:active {
   opacity: 0.8;
+}
+
+.a-5 {
+  text-decoration: none;
+  color: silver;
 }
 
 .link-5,
@@ -671,6 +680,7 @@ h2 {
   .copyright-5 {
     font-size: 12px;
   }
+
 }
 
 @media (min-width: 1025px) {
