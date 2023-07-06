@@ -376,7 +376,7 @@ button.hint .down {
 
 .section-4 {
   color: #fff;
-  height: 100vh;
+  min-height: 80vh;
   background-color: #040714;
   font-family: Avenir, sans-serif;
   position: relative;
@@ -480,6 +480,7 @@ h2 {
   letter-spacing: 0.2px;
   line-height: 26px;
   font-weight: 400;
+  padding-top: 2vw;
 }
 
 .four-cards-5 {
@@ -698,4 +699,8 @@ h2 {
   .copyright-5 {
     font-size: 12px;
   }
+}
+
+.section-4 .faq_header {
+  margin-bottom: 50px;
 }
