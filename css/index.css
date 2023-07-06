@@ -89,6 +89,10 @@ button.login:hover {
   color: #040714;
 }
 
+button.sbmtButton{
+  cursor: pointer;
+}
+
 button.signup {
   color: white;
   border: 1px solid silver;
@@ -400,17 +404,21 @@ button.hint .down {
   justify-content: space-between;
   margin-bottom: 15px;
   background-color: #13151d;
-  padding: 24px;
   width: 90%;
   cursor: pointer;
   position: relative;
 }
+.faq .soru-cevap .soru{
+  padding: 24px;
+}
+
 
 .faq .soru-cevap .soru:after {
   content: "+";
   font-size: 40px;
   position: absolute;
   right: 20px;
+  
 }
 
 .faq .soru-cevap.active .soru:after {
@@ -421,18 +429,24 @@ button.hint .down {
 }
 
 .faq .soru-cevap .cevap {
-  display: none;
+  
+  max-height: 0;
+  overflow: hidden;
+  color: silver;
+  letter-spacing: 0.5px;
+  line-height: 26px;
+  transition: .25s ease-in-out;
+}
+
+.faq .soru-cevap.active .cevap {
+  max-height: 1500px;
   color: silver;
   letter-spacing: 0.5px;
   line-height: 26px;
 }
 
-.faq .soru-cevap.active .cevap {
-  margin-top: 40px;
-  display: block;
-  color: silver;
-  letter-spacing: 0.5px;
-  line-height: 26px;
+.faq .soru-cevap .cevap p {
+  margin-left: 24px;
 }
 
 .faq .soru-cevap .cevap ul {
@@ -569,6 +583,22 @@ h2 {
   opacity: 0.8;
 }
 
+#lang{
+  background-color: transparent;
+  color: silver;
+  border: none;
+  padding: 0 10px;
+  cursor: pointer;
+}
+#lang:hover{
+  text-decoration: underline;
+  color: #f9f9f9;
+}
+
+#lang option{
+  color: black;
+}
+
 .a-5 {
   text-decoration: none;
   color: silver;
@@ -680,7 +710,6 @@ h2 {
   .copyright-5 {
     font-size: 12px;
   }
-
 }
 
 @media (min-width: 1025px) {
