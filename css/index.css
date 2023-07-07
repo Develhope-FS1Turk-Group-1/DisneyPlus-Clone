@@ -380,10 +380,11 @@ button.hint .down {
 
 .section-4 {
   color: #fff;
-  min-height: 80vh;
+  height: auto;
   background-color: #040714;
   font-family: Avenir, sans-serif;
   position: relative;
+
 }
 
 .faq {
