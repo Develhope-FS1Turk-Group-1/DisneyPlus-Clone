@@ -8,6 +8,7 @@ body {
   margin: 0;
   background-color: #040814;
 }
+
 .pre-sticky,
 .post-sticky {
   display: block;
@@ -89,7 +90,7 @@ button.login:hover {
   color: #040714;
 }
 
-button.sbmtButton{
+button.sbmtButton {
   cursor: pointer;
 }
 
@@ -127,7 +128,7 @@ div p span.h1 {
   line-height: 54px;
 }
 
-div > span {
+div>span {
   font-size: 24px;
   line-height: 34px;
   font-weight: 400;
@@ -200,6 +201,7 @@ div.form_container button {
 div.form_container {
   font-size: 20px;
 }
+
 div.form-field-container {
   flex-grow: 1;
 }
@@ -240,6 +242,7 @@ button.hint .down {
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -409,7 +412,8 @@ button.hint .down {
   cursor: pointer;
   position: relative;
 }
-.faq .soru-cevap .soru{
+
+.faq .soru-cevap .soru {
   padding: 24px;
 }
 
@@ -419,7 +423,7 @@ button.hint .down {
   font-size: 40px;
   position: absolute;
   right: 20px;
-  
+
 }
 
 .faq .soru-cevap.active .soru:after {
@@ -430,7 +434,7 @@ button.hint .down {
 }
 
 .faq .soru-cevap .cevap {
-  
+
   max-height: 0;
   overflow: hidden;
   color: silver;
@@ -458,6 +462,7 @@ button.hint .down {
   margin-inline-end: 0px;
   padding-inline-start: 40px;
 }
+
 .faq .soru-cevap .cevap ol {
   display: block;
   margin-block-start: 1em;
@@ -466,9 +471,11 @@ button.hint .down {
   margin-inline-end: 0px;
   padding-inline-start: 40px;
 }
+
 .faq .soru-cevap .cevap ul li {
   margin-bottom: 37px;
 }
+
 .faq .soru-cevap .cevap ol li {
   margin-bottom: 37px;
 }
@@ -572,6 +579,7 @@ h2 {
   color: #f9f9f9;
   cursor: pointer;
 }
+
 .link-5:active {
   opacity: 0.8;
 }
@@ -580,23 +588,25 @@ h2 {
   color: #f9f9f9;
   cursor: pointer;
 }
+
 .language-selector-5:active {
   opacity: 0.8;
 }
 
-#lang{
+#lang {
   background-color: transparent;
   color: silver;
   border: none;
   padding: 0 10px;
   cursor: pointer;
 }
-#lang:hover{
+
+#lang:hover {
   text-decoration: underline;
   color: #f9f9f9;
 }
 
-#lang option{
+#lang option {
   color: black;
 }
 
@@ -615,6 +625,61 @@ h2 {
   overflow: hidden;
   background-color: transparent;
   border-radius: 50px;
+}
+
+#loginContainer {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  background-color: gray;
+  justify-content: CENTER;
+  padding: 10px 20px;
+  border-radius: 10px;
+  gap: 30px;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  position: fixed;
+  z-index: 5;
+  top: 25%;
+  left: 50%;
+  height: 400px;
+  width: 400px;
+  background-color: #040814;
+}
+
+#loginContainer p,
+h3 {
+  color: #fff;
+}
+
+#loginContainer input::placeholder {
+  color: #f9f9f9;
+  opacity: 0.5;
+}
+
+#loginContainer input {
+  background-color: #f9f9f91a !important;
+  color: #f9f9f9;
+  border-radius: 10px;
+  text-align: center;
+  height: 37px;
+
+}
+
+#loginContainer button {
+  height: 45px;
+  background-color: #0072d2;
+  color: #f9f9f9;
+  border-radius: 10px;
+}
+
+#backgroundContainer {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 479px) {

@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>DISNEY PLUS CLONE PROJECT</title>
-        <link rel="stylesheet" href="css/index.css">
-        <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
-    </head>
-    <body onscroll="getScrollPosition()">
+
+<head>
+    <title>DISNEY PLUS CLONE PROJECT</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+</head>
+
+<body style="position: relative;" onscroll="getScrollPosition()">
+    <div id="backgroundContainer">
+        <div id="loginContainer">
+            <h3>Log in with your email</h3>
+            <p>You will use this email and password to log into your Disney+ account to watch your favourite shows and
+                movies.</p>
+            <input type="text" placeholder="Email adress">
+            <input type="text" placeholder="Password">
+            <button>LOGİN</button>
+        </div>
+    </div>
         <header>
             <nav class="pre-sticky">
                 <ul>
                     <li>
-                        <button class="login" onclick="window.location.href='https://www.disneyplus.com/login'">LOGIN</button>
+                        <button class="login" onclick="loginfunc()">LOGIN</button>
                     </li>
                 </ul>
             </nav>
             <nav class="post-sticky">
                 <ul>
                     <li>
-                        <button class="signup" onclick="window.location.href='https://www.disneyplus.com/sign-up?type=standard'">SIGN UP NOW</button>
+                        <button class="signup"
+                            onclick="window.location.href='https://www.disneyplus.com/sign-up?type=standard'">SIGN UP
+                            NOW</button>
                     </li>
                     <li>
-                        <button class="login" onclick="window.location.href='https://www.disneyplus.com/login'">LOGIN</button>
+                        <button class="login" onclick="loginfunc()">LOGIN</button>
                     </li>
                 </ul>
             </nav>
@@ -35,7 +49,7 @@
                     <span>Cancel at any time.*</span>
                     <div class="space_to_bottom"></div>
                     <p class="enter_mail">Enter your email to create or restart your subscription.</p>
-                
+
                     <div class="form_container">
                         <form action="">
                             <div class="form-field-container">
@@ -47,52 +61,59 @@
                         </form>
                     </div>
 
-                    <p class="month_info">Get 12 months for the price of 10 when you sign up for an annual Disney+ subscription, compared to paying monthly.</p>
+                    <p class="month_info">Get 12 months for the price of 10 when you sign up for an annual Disney+
+                        subscription, compared to paying monthly.</p>
                     <p class="fine"><span class="fine">*effective at the end of the billing period.</span></p>
                 </div>
 
 
-                <button class="hint" aria-label="Down Arrow" onclick="go_to_section_2();"><span><svg class="down" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" fill="none"></rect><path d="M36.63,18.37a1.37,1.37,0,0,1,2.15.37,1.7,1.7,0,0,1-.3,2.06L25.4,32.64a1.37,1.37,0,0,1-1.85,0l-13-11.84a1.71,1.71,0,0,1-.29-2.06,1.37,1.37,0,0,1,2.15-.37l12.11,11ZM24.25,31.42a.38.38,0,0,1,.46,0l-.23-.21ZM11.71,19.55s0,.06,0,0Zm25.61,0h0Z"></path></svg></span></button>
-                
+                <button class="hint" aria-label="Down Arrow" onclick="go_to_section_2();"><span><svg class="down"
+                            data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                            <rect width="48" height="48" fill="none"></rect>
+                            <path
+                                d="M36.63,18.37a1.37,1.37,0,0,1,2.15.37,1.7,1.7,0,0,1-.3,2.06L25.4,32.64a1.37,1.37,0,0,1-1.85,0l-13-11.84a1.71,1.71,0,0,1-.29-2.06,1.37,1.37,0,0,1,2.15-.37l12.11,11ZM24.25,31.42a.38.38,0,0,1,.46,0l-.23-.21ZM11.71,19.55s0,.06,0,0Zm25.61,0h0Z">
+                            </path>
+                        </svg></span></button>
+
             </section>
             <section class="mandalorian">
                 <img src="images/original.jpeg" alt="" />
-                  <div class="text-content">
-                      <h1>Sadece Disney+'ta</h1>
-                      <p>
-                          Başka hiçbir dijital yayın platformunda bulamayacağın film, dizi ve orijinal içerikler.
-                      </p>
-                  </div>
-              </section>
-          
-              <section class="description">
+                <div class="text-content">
+                    <h1>Sadece Disney+'ta</h1>
+                    <p>
+                        Başka hiçbir dijital yayın platformunda bulamayacağın film, dizi ve orijinal içerikler.
+                    </p>
+                </div>
+            </section>
+
+            <section class="description">
                 <h1>Dilediğin gibi izle</h1>
                 <p>
-                  Dünyanın en iyi hikayelerinin tadını çıkar - istediğin zaman, istediğin yerde.
+                    Dünyanın en iyi hikayelerinin tadını çıkar - istediğin zaman, istediğin yerde.
                 </p>
                 <img src="images/original (1).jpeg" alt="" />
-          
-          
+
+
                 <div class="three-column">
-                  <div>
-                    <img src="images/cinema.png" alt="">
-                    <h3>Sonsuz eğlence</h1>
-                    <p>Binlerce saatlik dizi, film ve orijinal içeriği keşfet.</p>
-                  </div>
-          
-                  <div>
-                    <img src="images/devices.png" alt="">
-                    <h3>Favori cihazlarında</h3>
-                    <p>Uyumlu cihazlarda aynı anda dört ayrı ekranda izle.</p>
-                  </div>
-          
-                  <div>
-                    <img src="./images/people.png" alt="">
-                    <h3>Kullanıcı dostu ebeveyn kontrolleri</h3>
-                    <p>Kullanımı kolay ebeveyn kontrollerimizle aileni güvende tut.</p>
-                  </div>
+                    <div>
+                        <img src="images/cinema.png" alt="">
+                        <h3>Sonsuz eğlence</h1>
+                            <p>Binlerce saatlik dizi, film ve orijinal içeriği keşfet.</p>
+                    </div>
+
+                    <div>
+                        <img src="images/devices.png" alt="">
+                        <h3>Favori cihazlarında</h3>
+                        <p>Uyumlu cihazlarda aynı anda dört ayrı ekranda izle.</p>
+                    </div>
+
+                    <div>
+                        <img src="./images/people.png" alt="">
+                        <h3>Kullanıcı dostu ebeveyn kontrolleri</h3>
+                        <p>Kullanımı kolay ebeveyn kontrollerimizle aileni güvende tut.</p>
+                    </div>
                 </div>
-              </section>
+            </section>
             <section class="section-4">
                 <div class="faq">
                     <h2 class="faq_header">Sık Sorulan Sorular</h2>
@@ -100,7 +121,8 @@
                         <div class="soru">Disney+ nedir?</div>
                         <div class="cevap">
                             <p>
-                                Disney+; Disney, Pixar, Marvel, Star Wars, National Geographic ve çok daha fazlasına ait içeriklerin yer aldığı dijital yayın platformudur.
+                                Disney+; Disney, Pixar, Marvel, Star Wars, National Geographic ve çok daha fazlasına ait
+                                içeriklerin yer aldığı dijital yayın platformudur.
                                 <br>
                                 <br>
 
@@ -111,30 +133,35 @@
 
                             <ul>
                                 <li>
-                                    <p>Başka hiçbir yerde izleyemeyeceğin orijinal içerikler, gişe filmleri, bir solukta izlenebilecek diziler ve programlar, atıştırmalık kısa içerikler ve ilham verici belgeseller</p>
+                                    <p>Başka hiçbir yerde izleyemeyeceğin orijinal içerikler, gişe filmleri, bir solukta
+                                        izlenebilecek diziler ve programlar, atıştırmalık kısa içerikler ve ilham verici
+                                        belgeseller</p>
                                 </li>
-                                
+
                                 <li>
                                     <p>10 cihaza ve 7 ayrı profile kadar sınırsız indirme imkanı</p>
                                 </li>
-                                
+
                                 <li>
-                                    <p>Uyumlu cihazlarda hiçbir ek ücret ödemeden 4K UHD çözünürlükte Dolby Vision ve Dolby Atmos desteğiyle izleme imkanı</p>
+                                    <p>Uyumlu cihazlarda hiçbir ek ücret ödemeden 4K UHD çözünürlükte Dolby Vision ve
+                                        Dolby
+                                        Atmos desteğiyle izleme imkanı</p>
                                 </li>
-                                
+
                                 <li>
                                     <p>Özel çocuk profilleri içeren kapsamlı ebeveyn kontrol sistemi</p>
                                 </li>
-                                
+
                                 <li>
                                     <p>Aynı anda 4 ekranda izleme imkanı</p>
                                 </li>
-                                
+
                                 <li>
-                                    <p>GroupWatch özelliğiyle altı arkadaşınla sanal izleme partileri düzenleme imkanı</p>
+                                    <p>GroupWatch özelliğiyle altı arkadaşınla sanal izleme partileri düzenleme imkanı
+                                    </p>
                                 </li>
                             </ul>
-                            
+
 
                         </div>
                     </div>
@@ -142,27 +169,39 @@
                         <div class="soru">Disney+'ta ne izleyebilirim?</div>
                         <div class="cevap">
                             <p>
-                                Dünyanın en iyi hikaye anlatıcılarından binlerce film, belgesel, dizi, animasyon, kısa içerik ve her ay eklenen yeni içeriklerle Disney+’ta her zaman izlemek için bir şey bulacaksın.
+                                Dünyanın en iyi hikaye anlatıcılarından binlerce film, belgesel, dizi, animasyon, kısa
+                                içerik ve her ay eklenen yeni içeriklerle Disney+’ta her zaman izlemek için bir şey
+                                bulacaksın.
                             </p>
                             <br>
                             <ul>
                                 <li>
-                                    <p>Disney’den “Cruella” ve “Enkanto” gibi gişe rekorları kıran, en yeni canlı aksiyon ve animasyon filmleri</p>
+                                    <p>Disney’den “Cruella” ve “Enkanto” gibi gişe rekorları kıran, en yeni canlı
+                                        aksiyon ve
+                                        animasyon filmleri</p>
                                 </li>
                                 <li>
-                                    <p>Pixar’ın dahi yaratıcılarından, her yaştan izleyici için “Luka” ve “Soul” gibi iç ısıtan hikayeler</p>
+                                    <p>Pixar’ın dahi yaratıcılarından, her yaştan izleyici için “Luka” ve “Soul” gibi iç
+                                        ısıtan hikayeler</p>
                                 </li>
                                 <li>
-                                    <p>Marvel Studios’dan mutlaka görülmesi gereken “Loki”, “Hawkeye” ve “WandaVision” gibi orijinal içerikler</p>
+                                    <p>Marvel Studios’dan mutlaka görülmesi gereken “Loki”, “Hawkeye” ve “WandaVision”
+                                        gibi
+                                        orijinal içerikler</p>
                                 </li>
                                 <li>
-                                    <p>“Obi-Wan Kenobi” ve “The Mandalorian” gibi çok çok uzak bir galaksiden destansı hikayeler</p>
+                                    <p>“Obi-Wan Kenobi” ve “The Mandalorian” gibi çok çok uzak bir galaksiden destansı
+                                        hikayeler</p>
                                 </li>
                                 <li>
                                     <p>Korkusuz National Geographic kaşifleri eşliğinde aydınlatıcı belgeseller</p>
                                 </li>
                                 <li>
-                                    <p>Herkesin konuştuğu “The Dropout”, “How I Met Your Father” gibi orijinal içerikler ve bir solukta yeniden izlenebilecek “How I Met Your Mother” ve “The Walking Dead” gibi dünyaca ünlü fenomen diziler</p>
+                                    <p>Herkesin konuştuğu “The Dropout”, “How I Met Your Father” gibi orijinal içerikler
+                                        ve
+                                        bir solukta yeniden izlenebilecek “How I Met Your Mother” ve “The Walking Dead”
+                                        gibi
+                                        dünyaca ünlü fenomen diziler</p>
                                 </li>
                             </ul>
                         </div>
@@ -171,7 +210,9 @@
                         <div class="soru">Disney+'ın fiyatı nedir?</div>
                         <div class="cevap">
                             <p>
-                                Disney+ aylık üyelik bedeli 64,99 TL’dir. Dilersen yıllık üyelik ile (tek ödemede 649,90 TL) 10 ay fiyatına 12 ay izleyebilirsin!*
+                                Disney+ aylık üyelik bedeli 64,99 TL’dir. Dilersen yıllık üyelik ile (tek ödemede 649,90
+                                TL)
+                                10 ay fiyatına 12 ay izleyebilirsin!*
                                 <br>
                                 <br>
 
@@ -182,13 +223,19 @@
                     <div class="soru-cevap">
                         <div class="soru">Hangi cihazlar destekleniyor?</div>
                         <div class="cevap">
-                            <p>Disney+; mobil cihazlar, web tarayıcıları, oyun konsolları, set üstü kutular ve smart TV’leri destekler. Tam liste için <a href="https://help.disneyplus.com/csp?id=csp_article_content&article=devices-supported">buraya</a> tıkla.</p>
+                            <p>Disney+; mobil cihazlar, web tarayıcıları, oyun konsolları, set üstü kutular ve smart
+                                TV’leri
+                                destekler. Tam liste için <a
+                                    href="https://help.disneyplus.com/csp?id=csp_article_content&article=devices-supported">buraya</a>
+                                tıkla.</p>
                         </div>
                     </div>
                     <div class="soru-cevap">
                         <div class="soru">Disney+ üyeliği taahhüt gerektiriyor mu?</div>
                         <div class="cevap">
-                            <p>Disney+ üyeliği hiçbir taahhüt gerektirmez ve mevcut faturalandırma döneminin bitiminden itibaren geçerli olmak kaydıyla üyeliğini dilediğin zaman iptal edebilirsin. Aşağıdaki 5 kolay adımı izlemen yeterli.</p>
+                            <p>Disney+ üyeliği hiçbir taahhüt gerektirmez ve mevcut faturalandırma döneminin bitiminden
+                                itibaren geçerli olmak kaydıyla üyeliğini dilediğin zaman iptal edebilirsin. Aşağıdaki 5
+                                kolay adımı izlemen yeterli.</p>
                             <br>
                             <ol>
                                 <li>
@@ -207,7 +254,9 @@
                                     <p>İptal İşlemini Tamamla’yı seçerek onayla</p>
                                 </li>
                             </ol>
-                            <p>Daha fazla bilgi için <a href="https://help.disneyplus.com/csp?id=csp_article_content&article=cancel">buraya</a> tıkla.</p>
+                            <p>Daha fazla bilgi için <a
+                                    href="https://help.disneyplus.com/csp?id=csp_article_content&article=cancel">buraya</a>
+                                tıkla.</p>
                         </div>
                     </div>
                 </div>
@@ -219,21 +268,21 @@
                     <div class="card-5">
                         <img class="img-5" src="images/original.png" alt="">
                         <h3 class="h3-5">TV</h3>
-                            <ul class="platform-5">
-                                <li>Amazon Fire TV</li>
-                                <li>Android TV</li>
-                                <li>Apple TV</li>
-                                <li>Arçelik*</li>
-                                <li>Beko*</li>
-                                <li>Chromecast</li>
-                                <li>Hisense</li>
-                                <li>LG</li>
-                                <li>Panasonic</li>
-                                <li>Samsung</li>
-                                <li>Vestel*</li>
-                            </ul>
+                        <ul class="platform-5">
+                            <li>Amazon Fire TV</li>
+                            <li>Android TV</li>
+                            <li>Apple TV</li>
+                            <li>Arçelik*</li>
+                            <li>Beko*</li>
+                            <li>Chromecast</li>
+                            <li>Hisense</li>
+                            <li>LG</li>
+                            <li>Panasonic</li>
+                            <li>Samsung</li>
+                            <li>Vestel*</li>
+                        </ul>
                     </div>
-        
+
                     <div class="card-5">
                         <img class="img-5" src="images/bilgisayar.png" alt="">
                         <h3 class="h3-5">Bilgisayar</h3>
@@ -252,7 +301,7 @@
                             <li>iPhone ve iPad</li>
                         </ul>
                     </div>
-        
+
                     <div class="card-5">
                         <img class="img-5" src="images/konsol.png" alt="">
                         <h3 class="h3-5">Oyun Konsolları</h3>
@@ -265,10 +314,12 @@
                         </ul>
                     </div>
                 </div>
-        
-                <p class="note-5">*Disney+ henüz Linux işletim sistemli Arçelik, Beko ve Vestel TV’leri desteklememektedir.</p>
+
+                <p class="note-5">*Disney+ henüz Linux işletim sistemli Arçelik, Beko ve Vestel TV’leri
+                    desteklememektedir.
+                </p>
             </section>
-        
+
             <footer class="footer-5">
                 <img class="disneylogo-5" src="images/footer.svg" alt="">
                 <ul class="footer-items-5">
@@ -278,14 +329,29 @@
                             <option value="En">English</option>
                         </select>
                     </li>
-                    <li class="link-5"><a class="a-5" href="https://www.disneyplus.com/tr-tr/legal/%C3%BCyelik-s%C3%B6zle%C5%9Fmesi">Üyelik Sözleşmesi</a></li>
-                    <li class="link-5"><a class="a-5" href="https://www.disneyplus.com/tr-tr/legal/gizlilik-politikas%C4%B1">Gizlilik Politikası</a></li>
-                    <li class="link-5"><a class="a-5" href="https://www.disneyplus.com/tr-tr/legal/emea-gizlilik-haklar%C4%B1">EMEA Gizlilik Hakları</a></li>
-                    <li class="link-5"><a class="a-5" href="https://www.disneyplus.com/tr-tr/legal/tan%C4%B1mlama-bilgileri-politikas%C4%B1">Tanımlama Bilgileri Politikası</a></li>
-                    <li class="link-5"><a class="a-5" href="https://preferences-mgr.trustarc.com/?pid=disney01&aid=disneyplusemea01&type=disneyplusemea">İlgi Alanına Dayalı Reklamlar</a></li>
-                    <li class="link-5"><a class="a-5" href="https://help.disneyplus.com/csp?id=csp_article_content&article=devices-supported">Desteklenen Cihazlar</a></li>
+                    <li class="link-5"><a class="a-5"
+                            href="https://www.disneyplus.com/tr-tr/legal/%C3%BCyelik-s%C3%B6zle%C5%9Fmesi">Üyelik
+                            Sözleşmesi</a></li>
+                    <li class="link-5"><a class="a-5"
+                            href="https://www.disneyplus.com/tr-tr/legal/gizlilik-politikas%C4%B1">Gizlilik
+                            Politikası</a>
+                    </li>
+                    <li class="link-5"><a class="a-5"
+                            href="https://www.disneyplus.com/tr-tr/legal/emea-gizlilik-haklar%C4%B1">EMEA Gizlilik
+                            Hakları</a></li>
+                    <li class="link-5"><a class="a-5"
+                            href="https://www.disneyplus.com/tr-tr/legal/tan%C4%B1mlama-bilgileri-politikas%C4%B1">Tanımlama
+                            Bilgileri Politikası</a></li>
+                    <li class="link-5"><a class="a-5"
+                            href="https://preferences-mgr.trustarc.com/?pid=disney01&aid=disneyplusemea01&type=disneyplusemea">İlgi
+                            Alanına Dayalı Reklamlar</a></li>
+                    <li class="link-5"><a class="a-5"
+                            href="https://help.disneyplus.com/csp?id=csp_article_content&article=devices-supported">Desteklenen
+                            Cihazlar</a></li>
                     <li class="link-5"><a class="a-5" href="https://help.disneyplus.com/csp">Yardım Merkezi</a></li>
-                    <li class="link-5"><a class="a-5" href="https://help.disneyplus.com/csp?id=csp_article_content&article=introduction">Hakkımızda</a></li>
+                    <li class="link-5"><a class="a-5"
+                            href="https://help.disneyplus.com/csp?id=csp_article_content&article=introduction">Hakkımızda</a>
+                    </li>
                     <li class="link-5"><a class="a-5" href="">Tercihleri Yönetin</a></li>
                 </ul>
                 <p class="copyright-5">© 2023 Disney ve bağlı kuruluşları.</p>
@@ -297,7 +363,7 @@
         <script>
             const browserHeight = window.innerHeight;
             const getScrollPosition = () => {
-                if(window.scrollY > browserHeight){
+                if (window.scrollY > browserHeight) {
                     document.querySelector('nav.pre-sticky').style.opacity = '0';
                     document.querySelector('nav.post-sticky').style.opacity = '1';
                 } else {
@@ -305,11 +371,11 @@
                     document.querySelector('nav.post-sticky').style.opacity = '0';
                 }
             }
-            
+
             const go_to_section_2 = () => {
-                
+
                 window.scrollBy(0, 893);
-                
+
             }
 
             const questions = document.querySelectorAll('.soru-cevap');
@@ -321,5 +387,8 @@
             });
 
         </script>
-    </body>
+        <script src="script.js"></script>
+
+</body>
+
 </html>
