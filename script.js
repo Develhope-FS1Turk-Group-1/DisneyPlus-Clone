@@ -10,6 +10,16 @@ window.addEventListener('click', (e) => {
     if (e.target == backgroundContainer) {
         backgroundContainer.style.display = 'none';
         loginContainer.style.display = 'none';
+        email.value=""
+        password.value=""
+        email.style.border="1px solid black"
+        password.style.border="1px solid black"
+        fullName.style.border="1px solid black"
+        signUpEmail.style.border="1px solid black"
+        loginError.style.display="none"
+        signUpPassword.style.border="1px solid black"
+        signError.style.display="none"
+        registeredError.style.display="none"
     }
 });
 
@@ -26,6 +36,14 @@ const banner = document.querySelector('.banner');
 const headerContainer = document.getElementById('headerContainer');
 const loginHeaderContainer = document.getElementById('loginHeaderContainer');
 const profileName = document.getElementById('profileName');
+const signError = document.getElementById('signError');
+const loginError = document.getElementById('loginError');
+const wrongPasswordError = document.getElementById('wrongPasswordError');
+const registeredError = document.getElementById('registeredError');
+const bannerSignUp = document.querySelector('.bannerSignUp');
+const backgroundRegisterContainer = document.getElementById('backgroundRegisterContainer');
+const RegisterContainer = document.getElementById('RegisterContainer');
+
 
 const users = JSON.parse(localStorage.getItem('users')) || [];
 
@@ -34,19 +52,27 @@ const signUp = () => {
     const userPassword = signUpPassword.value;
     const fullNameValue = fullName.value;
     console.log(userMail);
-    if (userMail !== '' && userPassword.length !== '' && fullNameValue !== '') {
+    if (userMail !== '' && userPassword.length > 7 && fullNameValue !== '') {
         if (!users.some((user) => user.email === userMail)) {
             users.push({fullName: fullNameValue, email: userMail, password: userPassword});
             localStorage.setItem('users', JSON.stringify(users));
             signUpContainer.style.display = 'none';
             backgroundSignUpContainer.style.display = 'none';
+            bannerSignUp.style.display="block"
         } else {
-            alert('You have been registered before.');
+            registeredError.style.display ="block"
         }
     } else {
-        alert(
-            'Sorry, Password length less than 8 or we are having trouble creating your account. Please re-enter your email and password and try again. If the problem persists, contact Disney+ Support.'
-        );
+        //border: 1px solid rgb(255, 85, 76);
+        fullName.style.border=" 1px solid rgb(255, 85, 76)"
+        signUpEmail.style.border=" 1px solid rgb(255, 85, 76)"
+        signUpPassword.style.border=" 1px solid rgb(255, 85, 76)"
+        signError.style.display="block"
+    }
+    if (bannerSignUp.style.display == 'block') {
+        setTimeout(() => {
+            bannerSignUp.style.display = 'none';
+        }, 2000);
     }
 };
 
@@ -73,32 +99,82 @@ const login = () => {
             loginHeaderContainer.style.display = 'block';
             profileName.innerHTML = user.fullName.toUpperCase();
             saveSession();
-
         } else {
-            alert('Password is wrong.');
+            password.style.border=" 1px solid rgb(255, 85, 76)"
+            wrongPasswordError.style.display="block"
+            //alert('Password is wrong.');
         }
+    } else if (userMail == '' || userPassword == '') {
+        email.style.border=" 1px solid rgb(255, 85, 76)"
+        password.style.border=" 1px solid rgb(255, 85, 76)"
+        loginError.style.display="block"
+        // alert('Invalid email or you have not been register.');
     } else {
-        alert('Invalid email or you have not been register.');
+        backgroundRegisterContainer.style.display="block"
+        RegisterContainer.style.display="flex"
     }
-    if (userMail === '' || userPassword === '') {
-        alert('Invalid email or you have not been register.');
-    }
+
     if (banner.style.display == 'block') {
         setTimeout(() => {
             banner.style.display = 'none';
         }, 2000);
     }
 };
+window.addEventListener('click', (e) => {
+    if (e.target == backgroundRegisterContainer) {
+        backgroundRegisterContainer.style.display = 'none';
+        RegisterContainer.style.display = 'none';
+    }
+});
+/*---------------- ERROR MESSAGE SCRIPTS ---------------*/
+const inputs = document.getElementsByTagName("input")
+
+for (let i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener("keypress", ()=>{
+        console.log("alperen")
+        email.style.border="1px solid black"
+        password.style.border="1px solid black"
+        fullName.style.border="1px solid black"
+        signUpEmail.style.border="1px solid black"
+        loginError.style.display="none"
+        signUpPassword.style.border="1px solid black"
+        signError.style.display="none"
+        registeredError.style.display="none"
+    })
+}
+
+let tryAgain = () =>{
+    backgroundRegisterContainer.style.display = 'none';
+    RegisterContainer.style.display = 'none';
+}
+/*---------------- ERROR MESSAGE SCRIPTS ---------------*/
 
 let signUpPopup = () => {
     signUpContainer.style.display = 'flex';
     backgroundSignUpContainer.style.display = 'block';
+    backgroundRegisterContainer.style.display = 'none';
+    RegisterContainer.style.display = 'none';
+    backgroundContainer.style.display = 'none';
+    loginContainer.style.display = 'none';
 };
+
+
 
 window.addEventListener('click', (e) => {
     if (e.target == backgroundSignUpContainer) {
         backgroundSignUpContainer.style.display = 'none';
         signUpContainer.style.display = 'none';
+        fullName.value=""
+        signUpEmail.value=""
+        signUpPassword.value=""
+        email.style.border="1px solid black"
+        password.style.border="1px solid black"
+        fullName.style.border="1px solid black"
+        signUpEmail.style.border="1px solid black"
+        loginError.style.display="none"
+        signUpPassword.style.border="1px solid black"
+        signError.style.display="none"
+        registeredError.style.display="none" 
     }
 });
 

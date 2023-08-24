@@ -9,13 +9,18 @@
 
 <body style="position: relative;" onscroll="getScrollPosition()">
     <div class="banner">
-        <p>Giriş başarılı bir şekilde yapıldı.</p>
+        <p></p>
+    </div>
+    <div class="bannerSignUp">
+        <p>Congracts, you have been registered!</p>
     </div>
     <div id="backgroundContainer">
         <div id="loginContainer">
             <h3>Log in with your email</h3>
             <p>You will use this email and password to log into your Disney+ account to watch your favourite shows and
                 movies.</p>
+            <p id="loginError">Invalid email or you have not been register.</p>
+            <p id="wrongPasswordError">Password is wrong.</p>
             <input id="emailInput" type="email" placeholder="Email adress" required>
             <input id="passwordInput" type="password" placeholder="Password" required>
             <button onclick="login()">LOGIN</button>
@@ -24,14 +29,36 @@
     <div id="backgroundSignUpContainer">
         <div id="signUpContainer">
             <h3>Sign up with your email</h3>
-            <p>You will use this email and password to sign in to your Disney+ account to watch your favorite shows and movies.
+            <p>You will use this email and password to sign in to your Disney+ account to watch your favorite shows and
+                movies.
             </p>
+            <p id="signError">Sorry, Password length less than 8 or we are having trouble creating your account. Please
+                re-enter your email and password and try again. If the problem persists, contact Disney+ Support.
+            </p>
+            <p id="registeredError">You have been registered before</p>
             <input id="fullName" type="text" placeholder="Enter the Fullname" required>
             <input id="signUpEmailInput" type="email" placeholder="Email adress" required>
             <input id="signUpPasswordInput" type="password" placeholder="Password" required minlength="8">
             <button onclick="signUp()">SIGN UP</button>
         </div>
     </div>
+
+
+
+    <div id="backgroundRegisterContainer" style="position: fixed; z-index: 19823129;">
+        <div id="RegisterContainer">
+            <h4 style="color:#f9f9f9; font-size: 20px; margin-top: -50px;">We couldn't find an account for that email</h4>
+            <p style="color:#cacaca; font-size: 15px;letter-spacing: -.1px; line-height: 1.6;">Check for typos. If you think this is an error, visit disneyplus.com/loginhelp. If you're new to Disney+,
+                sign up.</p>
+            <div id="registerButtons" style="display: flex; gap: 10px; position: fixed; right: 20px; bottom: 20px;">
+                <button onclick="signUpPopup()" style="width:112px ; height:40px; border-radius: 10px;">SIGN UP</button>
+                <button onclick="tryAgain()" style="width:112px ; height:40px; background-color: #0072d2; color:#f9f9f9; border-radius: 5px;">TRY AGAİN</button>
+            </div>
+        </div>
+    </div>
+
+
+
     <header id="headerContainer">
         <nav class="pre-sticky">
             <ul>
