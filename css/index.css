@@ -625,6 +625,25 @@ h2 {
     border-radius: 50px;
 }
 
+#subscribeContainer{
+    position: absolute;
+    flex-direction: column;
+    background-color: gray !important;
+    justify-content: CENTER;
+    padding: 10px 20px;
+    border-radius: 10px;
+    gap: 30px;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    position: fixed;
+    z-index: 5;
+    top: 25%;
+    left: 50%;
+    height: 200px;
+    width: 400px;
+    background-color: #040814;
+}
+
 #loginContainer {
     display: none;
     position: absolute;
@@ -643,6 +662,19 @@ h2 {
     height: 400px;
     width: 400px;
     background-color: #040814;
+}
+
+#subscribeContainer h3 {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#subscribeContainer p {
+    color: #fff;
+    text-align: center;
 }
 
 #loginContainer p,
@@ -671,6 +703,15 @@ h3 {
 }
 
 #backgroundContainer {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#backgroundSubscribeContainer {
     display: none;
     position: fixed;
     width: 100%;

@@ -5,6 +5,7 @@
     <title>DISNEY PLUS CLONE PROJECT</title>
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body style="position: relative;" onscroll="getScrollPosition()">
@@ -43,16 +44,28 @@
         </div>
     </div>
 
+    <div id="backgroundSubscribeContainer">
+        <div id="subscribeContainer">
+            <h3>You have sent mail successfully</h3>
+            <p>Get 12 months for the price of 10 when you sign up for an annual Disney+ subscription, compared to paying
+                monthly.</p>
+        </div>
+    </div>
+
 
 
     <div id="backgroundRegisterContainer" style="position: fixed; z-index: 19823129;">
         <div id="RegisterContainer">
-            <h4 style="color:#f9f9f9; font-size: 20px; margin-top: -50px;">We couldn't find an account for that email</h4>
-            <p style="color:#cacaca; font-size: 15px;letter-spacing: -.1px; line-height: 1.6;">Check for typos. If you think this is an error, visit disneyplus.com/loginhelp. If you're new to Disney+,
+            <h4 style="color:#f9f9f9; font-size: 20px; margin-top: -50px;">We couldn't find an account for that email
+            </h4>
+            <p style="color:#cacaca; font-size: 15px;letter-spacing: -.1px; line-height: 1.6;">Check for typos. If you
+                think this is an error, visit disneyplus.com/loginhelp. If you're new to Disney+,
                 sign up.</p>
             <div id="registerButtons" style="display: flex; gap: 10px; position: fixed; right: 20px; bottom: 20px;">
                 <button onclick="signUpPopup()" style="width:112px ; height:40px; border-radius: 10px;">SIGN UP</button>
-                <button onclick="tryAgain()" style="width:112px ; height:40px; background-color: #0072d2; color:#f9f9f9; border-radius: 5px;">TRY AGAİN</button>
+                <button onclick="tryAgain()"
+                    style="width:112px ; height:40px; background-color: #0072d2; color:#f9f9f9; border-radius: 5px;">TRY
+                    AGAİN</button>
             </div>
         </div>
     </div>
@@ -108,7 +121,7 @@
                             <input type="email" name="email" class="email" placeholder="Email">
                         </div>
                         <div class="form-field-buttons">
-                            <button class="sbmtButton" type="submit">GET STARTED</button>
+                            <button class="sbmtButton" type="submit" onclick="sendEmail();return false">GET STARTED</button>
                         </div>
                     </form>
                 </div>
@@ -412,6 +425,8 @@
     </main>
 
     <!-- Script is started from here -->
+    <script type="module" src="main.js"></script>
+
     <script>
         const browserHeight = window.innerHeight;
         const getScrollPosition = () => {
@@ -437,6 +452,38 @@
                 question.classList.toggle("active")
             })
         });
+
+        function isValidEmail(email) {
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            return emailPattern.test(email);
+        }
+
+        function sendEmail() {
+            let sendTo = document.querySelector('.email').value;
+            let isValidEmailAddress = isValidEmail(sendTo);
+            if (isValidEmailAddress) {
+                Email.send({
+                    Host: "smtp.elasticemail.com",
+                    Username: "sergenucar1718@gmail.com",
+                    Password: "1B3C3794172168379660C5EEBFE050189841",
+                    To: sendTo,
+                    From: "sergenucar1718@gmail.com",
+                    Subject: "This is the subject",
+                    Body: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width"><style type="text/css">body, html {margin: 0px;padding: 0px;-webkit-font-smoothing: antialiased;text-size-adjust: none;width: 100% !important;}table td, table {}#outlook a {padding: 0px;}.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}.ExternalClass {width: 100%;}@media only screen and (max-width: 480px) { table tr td table.edsocialfollowcontainer {width: auto !important;} table, table tr td, table td {width: 100% !important;}img {width: inherit;}.layer_2 {max-width: 100% !important;}.edsocialfollowcontainer table {max-width: 25% !important;}.edsocialfollowcontainer table td {padding: 10px !important;}}</style><link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i &subset=cyrillic,latin-ext" data-name="roboto" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css"></head><body style="padding:0; margin: 0;background: #81959f"><table style="height: 100%; width: 100%; background-color: #81959f;" align="center"><tbody><tr><td valign="top" id="dbody" data-version="2.31" style="width: 100%; height: 100%; padding-top: 30px; padding-bottom: 30px; background-color: #81959f;"><!--[if (gte mso 9)|(IE)]><table align="center" style="max-width:600px" width="600" cellpadding="0" cellspacing="0" border="0"><tr><td valign="top"><![endif]--><table class="layer_1" align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; box-sizing: border-box; width: 100%; margin: 0px auto;"><tbody><tr><td class="drow" valign="top" align="center" style="background-color: #ffffff; box-sizing: border-box; font-size: 0px; text-align: center;"><!--[if (gte mso 9)|(IE)]><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="top"><![endif]--><div class="layer_2" style="max-width: 600px; display: inline-block; vertical-align: top; width: 100%;"><table border="0" cellspacing="0" cellpadding="0" class="edcontent" style="border-collapse: collapse;width:100%"><tbody><tr><td valign="top" class="emptycell" style="padding: 2px;"></td></tr></tbody></table></div><!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]--></td></tr><tr><td class="drow" valign="top" align="center" style="background-color: #ffffff; box-sizing: border-box; font-size: 0px; text-align: center;"><!--[if (gte mso 9)|(IE)]><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="top"><![endif]--><div class="layer_2" style="max-width: 600px; display: inline-block; vertical-align: top; width: 100%;"><table border="0" cellspacing="0" cellpadding="0" class="edcontent" style="border-collapse: collapse;width:100%"><tbody><tr><td valign="top" class="emptycell" style="padding: 8px;"></td></tr></tbody></table></div><!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]--></td></tr><tr><td class="drow" valign="top" align="center" style="background-color: #ffffff; box-sizing: border-box; font-size: 0px; text-align: center;"><!--[if (gte mso 9)|(IE)]><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="top"><![endif]--><div class="layer_2" style="display: inline-block; vertical-align: top; width: 100%; max-width: 600px;"><table border="0" cellspacing="0" cellpadding="0" class="edcontent" style="border-collapse: collapse;width:100%"><tbody><tr><td valign="top" class="edimg" style="text-align: center; padding: 20px; box-sizing: border-box;"><img src="https://api.smtprelay.co/userfile/c32f5935-f926-4cb1-91ab-84720ae6f16b/share-default.14fadd993578b9916f855cebafb71e62.png" alt="Image" style="border-width: 0px; border-style: none; max-width: 546px; width: 100%;" width="546"></td></tr></tbody></table></div><!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]--></td></tr><tr><td class="drow" valign="top" align="center" style="background-color: #ffffff; box-sizing: border-box; font-size: 0px; text-align: center;"><!--[if (gte mso 9)|(IE)]><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="top"><![endif]--><div class="layer_2" style="max-width: 600px; display: inline-block; vertical-align: top; width: 100%;"><table border="0" cellspacing="0" class="edcontent" style="border-collapse: collapse;width:100%"><tbody><tr><td valign="top" class="edtext" style="padding: 20px; text-align: left; color: #534741; font-size: 14px; font-family: Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; word-break: break-word; direction: ltr; box-sizing: border-box;"><p style="margin: 0px; padding: 0px;"><strong>Hello,</strong></p><p style="margin: 0px; padding: 0px;"><strong><br></strong></p><p style="margin: 0px; padding: 0px;"><strong>Congratulations. You have been subscribed to Disney+&nbsp;Clone. If you want to go back to the previous page, you can click to the below link:</strong></p><p style="margin: 0px; padding: 0px;"><u><br></u></p><p class="text-center" style="text-align: center; margin: 0px; padding: 0px;"><strong><u>https://develhope-fs1turk-group-1.github.io/DisneyPlus-Clone/<br></u></strong></p><p class="text-center" style="text-align: center; margin: 0px; padding: 0px;"><br></p></td></tr></tbody></table></div><!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]--></td></tr><tr><td class="drow" valign="top" align="center" style="background-color: #ffffff; box-sizing: border-box; font-size: 0px; text-align: center;"><!--[if (gte mso 9)|(IE)]><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="top"><![endif]--><div class="layer_2" style="max-width: 600px; display: inline-block; vertical-align: top; width: 100%;"><table border="0" cellspacing="0" cellpadding="0" class="edcontent" style="border-collapse: collapse;width:100%"><tbody><tr><td valign="top" class="emptycell" style="padding: 8px;"></td></tr></tbody></table></div><!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]--></td></tr><tr><td class="drow" valign="top" align="center" style="background-color: #ffffff; box-sizing: border-box; font-size: 0px; text-align: center;"><!--[if (gte mso 9)|(IE)]><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="top"><![endif]--><div class="layer_2" style="max-width: 600px; display: inline-block; vertical-align: top; width: 100%;"><table border="0" cellspacing="0" cellpadding="0" class="edcontent" style="border-collapse: collapse;width:100%"><tbody><tr><td valign="top" class="edimg" style="padding: 0px; box-sizing: border-box; text-align: center;"><img src="https://api.elasticemail.com/userfile/a18de9fc-4724-42f2-b203-4992ceddc1de/getready-divider_3.png" alt="Image" width="600" style="border-width: 0px; border-style: none; max-width: 600px; width: 100%;"></td></tr></tbody></table></div><!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]--></td></tr></tbody></table><!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]--></td></tr></tbody></table></body></html>'
+                }).then(
+                    message => {
+                        let backgroundSubscribeContainer = document.getElementById('backgroundSubscribeContainer');
+                        backgroundSubscribeContainer.style.display = 'block';
+                        setTimeout(function () {
+                            backgroundSubscribeContainer.style.display = 'none';
+                            document.querySelector('.email').value = "";
+                        }, 5000);
+                    }
+                );
+            } else {
+                return null;
+            }
+        }
 
     </script>
     <script src="script.js"></script>
