@@ -105,6 +105,8 @@ const login = () => {
         } else {
             password.style.border=" 1px solid rgb(255, 85, 76)"
             wrongPasswordError.style.display="block"
+            mainContainer.style.display = 'block';
+            loginBody.style.display = 'none';
             //alert('Password is wrong.');
         }
     } else if (userMail == '' || userPassword == '') {
@@ -202,6 +204,9 @@ window.onload = () => {
                     banner.style.display = 'none';
                 }, 2000);
             }
+        } else {
+            mainContainer.style.display = 'block';
+            loginBody.style.display = 'none';
         }
     }
 };
