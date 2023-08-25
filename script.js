@@ -52,7 +52,6 @@ const signUp = () => {
     const userMail = signUpEmail.value;
     const userPassword = signUpPassword.value;
     const fullNameValue = fullName.value;
-    console.log(userMail);
     if (userMail !== '' && userPassword.length > 7 && fullNameValue !== '') {
         if (!users.some((user) => user.email === userMail)) {
             users.push({fullName: fullNameValue, email: userMail, password: userPassword});
@@ -79,7 +78,6 @@ const signUp = () => {
 
 const saveSession = () => {
     const userMail = email.value;
-    console.log(userMail);
     const sessionData = {
         userMail: userMail,
     };
@@ -132,7 +130,6 @@ const inputs = document.getElementsByTagName("input")
 
 for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener("keypress", ()=>{
-        console.log("alperen")
         email.style.border="1px solid black"
         password.style.border="1px solid black"
         fullName.style.border="1px solid black"
