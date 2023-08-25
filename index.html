@@ -5,6 +5,9 @@
     <title>DISNEY PLUS CLONE PROJECT</title>
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
@@ -65,7 +68,7 @@
                 <button onclick="signUpPopup()" style="width:112px ; height:40px; border-radius: 10px;">SIGN UP</button>
                 <button onclick="tryAgain()"
                     style="width:112px ; height:40px; background-color: #0072d2; color:#f9f9f9; border-radius: 5px;">TRY
-                    AGAİN</button>
+                    AGAIN</button>
             </div>
         </div>
     </div>
@@ -94,16 +97,8 @@
             </ul>
         </nav>
     </header>
-    <header id="loginHeaderContainer" style="display: none;">
-        <ul>
-            <li>
-                <button id="profileName" class="login" onclick="">sadas</button>
-            </li>
-            <li>
-                <button onclick="logout()" class="signup">LOG OUT</button>
-            </li>
-        </ul>
-    </header>
+
+
     <main class="main">
         <section class="section_header_part">
             <div class="cover"></div>
@@ -121,7 +116,8 @@
                             <input type="email" name="email" class="email" placeholder="Email">
                         </div>
                         <div class="form-field-buttons">
-                            <button class="sbmtButton" type="submit" onclick="sendEmail();return false">GET STARTED</button>
+                            <button class="sbmtButton" type="submit" onclick="sendEmail();return false">GET
+                                STARTED</button>
                         </div>
                     </form>
                 </div>
@@ -424,10 +420,303 @@
         </footer>
     </main>
 
+    <div class="container-fluid p-0" id="loginBody">
+        <header id="loginHeaderContainer" style="display: none;">
+            <ul style="float: left;">
+                <li class="nav-item logo">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://cnbl-cdn.bamgrid.com/assets/7ecc8bcb60ad77193058d63e321bd21cbac2fc67281dbd9927676ea4a4c83594/original"
+                            max-width="100%" style="max-width: 20px;min-width: 80px;float: left;">
+                    </a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house fa-sm me-1"
+                            style="color: #ffffff;"></i> HOME</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass fa-sm me-1"
+                            style="color: #ffffff;"></i> SEARCH</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-plus fa-sm me-1" style="color: #ffffff;"></i>
+                        WATCHLIST</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-star fa-sm me-1" style="color: #ffffff;"></i>
+                        ORIGINALS</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-film fa-sm me-1" style="color: #ffffff;"></i>
+                        MOVIES</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-clapperboard fa-sm me-1"
+                            style="color: #ffffff;"></i>
+                        SERIES</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <button id="profileName" class="login" onclick="">sadas</button>
+                </li>
+                <li>
+                    <button onclick="logout()" class="signup">LOG OUT</button>
+                </li>
+            </ul>
+        </header>
+        <!-- CAROUSEL -->
+        <div id="carouselExampleAutoplaying" class="carousel slide w-100" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                    aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/movie2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/movie3.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/movie4.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/movie5.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/movie6.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/movie7.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- PRODUCTION  CARDS -->
+        <div class="cards py-3">
+            <div class="row d-flex justify-content-between align-items-center px-5">
+                <div class="col-lg-2">
+                    <div class="card">
+                        <a href=""><img alt=""
+                                src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/5A9416D67DC9595496B2666087596EE64DE379272051BB854157C0D938BE2C26/scale?width=640&amp;aspectRatio=1.78&amp;format=png"
+                                class="sc-bwzfXH hlugew"></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="card">
+                        <a href=""><img alt=""
+                                src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/FFA0BEBAC1406D88929497501C84019EBBA1B018D3F7C4C3C829F1810A24AD6E/scale?width=640&amp;aspectRatio=1.78&amp;format=png"
+                                class="sc-bwzfXH hlugew"></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="card">
+                        <a href=""><img alt=""
+                                src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/7F4E1A299763030A0A8527227AD2812C049CE3E02822F7EDEFCFA1CFB703DDA5/scale?width=640&amp;aspectRatio=1.78&amp;format=png"
+                                class="sc-bwzfXH hlugew"></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="card">
+                        <a href=""><img alt=""
+                                src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/C90088DCAB7EA558159C0A79E4839D46B5302B5521BAB1F76D2E807D9E2C6D9A/scale?width=640&amp;aspectRatio=1.78&amp;format=png"
+                                class="sc-bwzfXH hlugew"></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="card">
+                        <a href=""><img alt=""
+                                src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/2EF24AA0A1E648E6D1A3B26491F516632137ED87AB22969D153316F8BD670FB5/scale?width=640&amp;aspectRatio=1.78&amp;format=png"
+                                class="sc-bwzfXH hlugew"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ORIGINALS CARDS -->
+        <div id="carouselExampleControls_1" class="carousel slide px-5" data-ride="carousel">
+            <div class="carouselTitle">
+                <h3>Originals</h3>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOVIES CARDS -->
+        <div id="carouselExampleControls_2" class="carousel slide mt-5 px-5" data-ride="carousel">
+            <div class="carouselTitle">
+                <h3>Movies</h3>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SERIES CARDS -->
+        <div id="carouselExampleControls_3" class="carousel slide mt-5 px-5 pb-5" data-ride="carousel">
+            <div class="carouselTitle">
+                <h3>Series</h3>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <!-- Script is started from here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
     <script type="module" src="main.js"></script>
 
     <script>
+
+        const movies_1 = [
+            {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/2970945770FC137FF7D5D3408D5D40836FD4C715DE6A1744F6F5AF21B2386827/scale?width=800&aspectRatio=1.78&format=jpeg"
+            },
+            {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/7BC75884E54439BD7C8CFE325C1AFC69AEE94C3413BC3D16A3F231F552216CA3/scale?width=800&aspectRatio=1.78&format=jpeg"
+            },
+            {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/F9D6B951BA465913E67F214925FB5AA40318C592882D5FA13E22D9DCE85B262E/badging?width=800&aspectRatio=1.78&format=jpeg&label=georiginal"
+            },
+            {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/7238583A12BC3EE570A6D8E240D67D0E6CACE9C782B434F7FFE09747512BDE0C/scale?width=800&aspectRatio=1.78&format=jpeg"
+            },
+            {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/EC04A21DA481F4CFB6B700F75D6D6990C2029AAD69206F0AD4B182F752B2C74C/scale?width=800&aspectRatio=1.78&format=jpeg"
+            },
+            {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/F9D6B951BA465913E67F214925FB5AA40318C592882D5FA13E22D9DCE85B262E/badging?width=800&aspectRatio=1.78&format=jpeg&label=georiginal"
+            }
+        ]
+
+        const movies_2 = [
+            {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/FD707A58640CB484B434EF4AC4F27209C5E752AA3CA4408FE16424654E679207/badging?width=800&aspectRatio=1.78&format=jpeg&label=georiginal"
+            },
+            {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/B1B191E9B28BA56F9EB8C6BD15D9B264CF8826893BB0805A39FBE32F4763873C/scale?width=800&aspectRatio=1.78&format=jpeg"
+            },
+            {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/183F57465C62CE9EFCD0476D2E9CF29C3E3962B2EAA81A5E022D867C87B52AC9/scale?width=800&aspectRatio=1.78&format=jpeg"
+            },
+            {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/8DE5FD98958BCFC5A73B06840696AC21C369AABC357989B27E4539C89ADB89FD/scale?width=800&aspectRatio=1.78&format=jpeg"
+            },
+            {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/47FCE4F29DC1D7C1FC72071B226D58E2FC345B4C258E88683E5250F7A4BA96B4/badging?width=800&aspectRatio=1.78&format=jpeg&label=georiginal"
+            }, {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/FD707A58640CB484B434EF4AC4F27209C5E752AA3CA4408FE16424654E679207/badging?width=800&aspectRatio=1.78&format=jpeg&label=georiginal"
+            }
+        ]
+
+        const movies_3 = [
+            {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/B8D185C2F7D0BC3CE77D6478EEA658BC5FE74DE9564D957C9B39B1BD61FCE538/scale?width=800&aspectRatio=1.78&format=jpeg"
+            },
+            {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/C1CE183A61FA2917A6A3DA56F34F74816C670B26FE82A4B54FBB28324C86E705/scale?width=800&aspectRatio=1.78&format=jpeg"
+            },
+            {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/4756ECBE9E78125C0A09560E176199FC2F2ACD57A7C1D7AFC210887248035C9B/scale?width=800&aspectRatio=1.78&format=jpeg"
+            },
+            {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/1D4C167BBC3E8AF5DDCD2FB467B506BD51EA1D925F1BB85F326F8C78D68AC0B3/badging?width=800&aspectRatio=1.78&format=jpeg&label=disneyplusoriginal"
+            },
+            {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/C78C1EA2407403E4ED1EE8FB959FE06B817F5593D5AC02B6385A8FFCAF6B3C86/scale?width=800&aspectRatio=1.78&format=jpeg"
+            }, {
+                "img_src": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/4756ECBE9E78125C0A09560E176199FC2F2ACD57A7C1D7AFC210887248035C9B/scale?width=800&aspectRatio=1.78&format=jpeg"
+            }
+        ]
+
+        const container_1 = document.querySelector('#carouselExampleControls_1').querySelector('.row');
+        const container_2 = document.querySelector('#carouselExampleControls_2').querySelector('.row');
+        const container_3 = document.querySelector('#carouselExampleControls_3').querySelector('.row');
+
+        // Loop through the movies array
+        movies_1.forEach(movie => {
+            const cardDiv = document.createElement("div");
+            cardDiv.className = "col-md-2";
+
+            const card = document.createElement("div");
+            card.className = "card";
+
+            const image = document.createElement("img");
+            image.className = "card-img-top";
+            image.src = movie.img_src;
+            card.appendChild(image);
+            cardDiv.appendChild(card);
+            container_1.appendChild(cardDiv);
+        });
+
+        // Loop through the movies array
+        movies_2.forEach(movie => {
+            const cardDiv = document.createElement("div");
+            cardDiv.className = "col-md-2";
+
+            const card = document.createElement("div");
+            card.className = "card";
+
+            const image = document.createElement("img");
+            image.className = "card-img-top";
+            image.src = movie.img_src;
+            card.appendChild(image);
+            cardDiv.appendChild(card);
+            container_2.appendChild(cardDiv);
+        });
+
+        // Loop through the movies array
+        movies_3.forEach(movie => {
+            const cardDiv = document.createElement("div");
+            cardDiv.className = "col-md-2";
+
+            const card = document.createElement("div");
+            card.className = "card";
+
+            const image = document.createElement("img");
+            image.className = "card-img-top";
+            image.src = movie.img_src;
+            card.appendChild(image);
+            cardDiv.appendChild(card);
+            container_3.appendChild(cardDiv);
+        });
+
+
         const browserHeight = window.innerHeight;
         const getScrollPosition = () => {
             if (window.scrollY > browserHeight) {

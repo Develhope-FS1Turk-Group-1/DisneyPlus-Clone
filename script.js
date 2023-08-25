@@ -44,6 +44,8 @@ const registeredError = document.getElementById('registeredError');
 const bannerSignUp = document.querySelector('.bannerSignUp');
 const backgroundRegisterContainer = document.getElementById('backgroundRegisterContainer');
 const RegisterContainer = document.getElementById('RegisterContainer');
+const mainContainer = document.querySelector('.main');
+const loginBody = document.querySelector('#loginBody');
 
 
 const users = JSON.parse(localStorage.getItem('users')) || [];
@@ -96,6 +98,8 @@ const login = () => {
             banner.style.display = 'block';
             headerContainer.style.display = 'none';
             loginHeaderContainer.style.display = 'block';
+            mainContainer.style.display = 'none';
+            loginBody.style.display = 'block';
             profileName.innerHTML = user.fullName.toUpperCase();
             saveSession();
         } else {
@@ -190,6 +194,8 @@ window.onload = () => {
             banner.style.display = 'block';
             headerContainer.style.display = 'none';
             loginHeaderContainer.style.display = 'block';
+            mainContainer.style.display = 'none';
+            loginBody.style.display = 'block';
             if (banner.style.display == 'block') {
                 setTimeout(() => {
                     banner.style.display = 'none';
