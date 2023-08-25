@@ -230,7 +230,7 @@ button.hint {
     animation: bounce 1.75s infinite;
     background-color: transparent;
     border: none;
-    bottom: 2vw;
+    /*bottom: 2vw;*/
     cursor: pointer;
     font-size: 0;
     height: 48px;
@@ -239,6 +239,7 @@ button.hint {
     padding: 6px;
     position: absolute;
     width: 48px;
+    margin-top: 70px;
 }
 
 button.hint .down {
