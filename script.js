@@ -126,7 +126,7 @@ window.addEventListener('click', (e) => {
     }
 });
 /*---------------- ERROR MESSAGE SCRIPTS ---------------*/
-const inputs = document.getElementsByTagName("input")
+const inputs = document.getElementsByName("inputs")
 
 for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener("keypress", ()=>{
@@ -148,6 +148,7 @@ let tryAgain = () =>{
 /*---------------- ERROR MESSAGE SCRIPTS ---------------*/
 
 let signUpPopup = () => {
+    signUpEmail.value = email.value
     signUpContainer.style.display = 'flex';
     backgroundSignUpContainer.style.display = 'block';
     backgroundRegisterContainer.style.display = 'none';
