@@ -129,6 +129,7 @@ div.p {
 div p span.h1 {
     font-size: 44px;
     line-height: 54px;
+    color: white;
 }
 
 div>span {
